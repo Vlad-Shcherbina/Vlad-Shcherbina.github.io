@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<h1>Random stuff</h1>
+{% for post in site.posts %}
+  {% include post_body.html post=post title_link=true %}
+  <hr>
+{% endfor %}

@@ -1,0 +1,14 @@
+<article>
+  <time datetime="{{ include.post.date | date:"%Y-%02m-%02d" }}">
+    {{ include.post.date | date:"%02d %b %Y" }}
+  </time>
+  {% if include.title_link %}
+    <a href="{{ include.post.url }}"><h2>{{ include.post.title }}</h2></a>
+  {% else %}
+    <h2>{{ include.post.title }}</h2>
+  {% endif %}
+
+  <div>
+    {{ include.post.content | markdownify}}
+  </div>
+</article>
