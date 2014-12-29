@@ -1,5 +1,15 @@
 ---
 layout: default
 ---
-<a href="{{ site.baseurl }}"><h1>{{ site.title }}</h1></a>
-{% include post_body.html post=page %}
+<h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+
+<article>
+  <time datetime="{{ page.date | date:"%Y-%02m-%02d" }}">
+    {{ page.date | date:"%02d %b %Y" }}
+  </time>
+  <h2>{{ page.title }}</h2>
+
+  <div>
+    {{ content }}
+  </div>
+</article>
