@@ -16,12 +16,21 @@
   <link rel="stylesheet"
         type="text/css"
         href="{{ site.baseurl }}main.css">
+  <link rel="stylesheet"
+        type="text/css"
+        href="{{ site.baseurl }}syntax.css">
 
   <script type="text/javascript"
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    tex2jax: {inlineMath: [['$','$']]}
+    "HTML-CSS": { linebreaks: { automatic: true } },
+    tex2jax: {
+      inlineMath: [['$','$']],
+      // Make sure that <code> is handled by mathjax, because we are going to
+      // use backticks to prevent markdown from processing underscores.
+      skipTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
   });
   </script>
 </head>
