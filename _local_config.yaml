@@ -1,0 +1,2 @@
+# bundle exec jekyll serve --config _config.yaml,_local_config.yaml
+local_run: true
