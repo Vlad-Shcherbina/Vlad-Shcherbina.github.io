@@ -32,7 +32,7 @@ $$
 This is a sequence of
 [Fibonacci words](http://en.wikipedia.org/wiki/Fibonacci_word).
 Wikipedia uses alternative definition
-$S_0 = 0$, $S_1 = 1$, `$S_n = S_{n-1} S_{n-2}$`,
+$S_0 = 0$, $S_1 = 01$, `$S_n = S_{n-1} S_{n-2}$`,
 but it's easy to show that it's equivalent to iterative application of $T$:
 
 $$
