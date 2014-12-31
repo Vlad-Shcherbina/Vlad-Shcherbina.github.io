@@ -79,7 +79,15 @@ $\boldsymbol{0}$ in $S_0$, so it will be represented by an expression
 Matured (Born NoHistory)
 {% endhighlight %}
 
-Operations:
+It is convenient, given a history of an element,
+to know whether it's $0$ or $1$:
+
+{% highlight haskell %}
+isMature :: RabbitHistory -> Bool
+isMature (Born _) = False
+isMature _ = True{% endhighlight %}
+
+Moving vertically:
 
 {% highlight haskell %}
 up :: RabbitHistory -> RabbitHistory
@@ -90,7 +98,12 @@ up (Matured h) = h
 down :: RabbitHistory -> [RabbitHistory]
 down (Born h) = [Matured (Born h)]
 down h = [Stayed h, Born h]
+{% endhighlight %}
 
+Moving left and right is somewhat tricky, because it may involve direct siblings,
+1st cousins, 2nd cousins, and so on. Principal cases are shown below.
+
+{% highlight haskell %}
 left :: RabbitHistory -> RabbitHistory
 left (Born h)           = Stayed h         -- (a)
 left (Matured (Born h)) = Born (Stayed h)  -- (b)
@@ -105,12 +118,6 @@ right (Born (Stayed h)) = Matured (Born h)  -- (b)
 right (Born h)          = Stayed (right h)  -- (c')
 right (Matured h)       = Stayed (right h)  -- (c)
 {% endhighlight %}
-
-These operations have nice property that `down` is inverse of `up` and `left`
-is inverse of `right`.
-
-Moving left and right is somewhat tricky, because it may involve direct siblings,
-1st cousins, 2nd cousins, and so on. Principal cases are shown below.
 
 <figure>
 <img src="{{ site.baseurl }}images/rabbit_navigation.png" style="width: 100%">
