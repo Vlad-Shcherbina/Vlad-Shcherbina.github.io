@@ -35,3 +35,7 @@ a:hover {
 body {
   font-family: "Verdana", Geneva, sans-serif;
 }
+
+figure {
+  margin: 20px;
+}
