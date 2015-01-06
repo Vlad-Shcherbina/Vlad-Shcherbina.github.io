@@ -15,8 +15,7 @@ h2 {
   margin: 0px;
 }
 
-a {
-  margin: 0px;
+h1 a, h2 a {
   text-decoration: none;
 }
 
