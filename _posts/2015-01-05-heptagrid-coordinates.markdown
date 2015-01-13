@@ -43,7 +43,8 @@ and it happens to coincide with
 [the rabbit rule $T$]({% post_url 2014-12-30-rabbits-tree %})
 applied twice!
 
-This also explains why "generations" of this partition form Fibonacci words:
+This also explains why "generations" of this partition form
+[Fibonacci words](http://en.wikipedia.org/wiki/Fibonacci_word):
 
 <figure>
 <img src="{{ site.baseurl }}images/obtuse_sector_layers.png"
@@ -111,4 +112,5 @@ adjacent (Heptagon h) = map Heptagon (
 {% endhighlight %}
 
 Unfortunately, this implementation of `adjacent` has a defect.
-It will be addressed in the follow-up post.
+It will be addressed in
+[the follow-up post]({% post_url 2015-01-12-adjacent-heptagons %}).
