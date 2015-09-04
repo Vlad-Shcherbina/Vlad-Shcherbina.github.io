@@ -137,7 +137,7 @@ of $\theta$, we'll get equal probabilities for all possible numbers of tails:
 </table>
 </figure>
 
-One can verify it be checking that for all $k$
+One can verify it by checking that for all $k$
 
 $$
 \int_0^1 {n\choose k} \theta^{k}(1-\theta)^{n-k} \,d\theta = \frac{1}{n+1},
